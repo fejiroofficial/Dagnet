@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import logo from '@/app/asset/svg/logo.svg';
 import nav from '@/app/asset/svg/eclipse.svg';
-import banner from "@/app/asset/svg/banner.svg";
+import banner from "@/app/asset/svg/book.svg";
 import cover from "@/app/asset/svg/landing.svg";
 
 export default function Header({ rating = 5 }) {
@@ -18,7 +18,7 @@ export default function Header({ rating = 5 }) {
            <div className="flex items-center justify-center relative lg:hidden w-full">
               <Image src={banner} alt="banner" className="w-full lg:w-[492px]"/>
           </div>
-      <div className="flex items-center text-center relative z-10 gap-1">
+      <div className="flex items-center text-center relative z-10 gap-1 mb-8">
         <Image src={logo} alt="logo-icon" className="w-[26px] h-[25px] lg:w-[41px] lg:h-[39px]" />
         <div>
           {Array.from({ length: rating }, (_, index) => (
@@ -35,7 +35,6 @@ export default function Header({ rating = 5 }) {
         <h2 className="text-[18px] lg:text-[22px] font-medium lg:mb-3 w-[329px] md:w-full">
           Without having to pay anyone a <span className="font-semibold lg:font-[900]">DIME</span> out of your $0 marketing budget
         </h2>
-        <p className="text-[12px] lg:text-[14px] font-semibold">(BONUS → FREE WEBSITE TEMPLATE INCLUDED)</p>
       </div>
     </div>
   );

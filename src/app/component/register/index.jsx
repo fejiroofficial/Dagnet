@@ -4,11 +4,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import banner from "@/app/asset/svg/banner.svg";
+import banner from "@/app/asset/svg/book.svg";
 import { createSubscriber, addSubscriberToForm } from "@/app/api";
 
 export default function Register({ formId }) {
-  const [isSuccess, setIsSuccess] = useState(true);
+  const [isSuccess, setIsSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     first_name: "",
@@ -105,9 +105,6 @@ export default function Register({ formId }) {
                         {loading
                           ? "Registering..."
                           : "YES! I’M IN, REGISTER ME FOR COURSE NOW"}
-                      </p>
-                      <p className="text-[10px] lg:text-[12px] font-bold">
-                        & INSTANTLY UNLOCK A FREE WEBSITE TEMPLATE FOR MY SAAS
                       </p>
                     </>
                   )}
