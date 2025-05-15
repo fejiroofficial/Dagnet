@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import banner from "@/app/asset/svg/book.svg";
+import illustration from "@/app/asset/illustration.png";
 import { createSubscriber, addSubscriberToForm } from "@/app/api";
 
 export default function Register({ formId }) {
@@ -85,9 +85,7 @@ export default function Register({ formId }) {
             </form>
             <button
               type="button"
-              className={`flex flex-col p-1 lg:p-2 rounded-lg cursor-pointer transition-all ${
-                isSuccess ? "bg-[#D3FBEB]" : "bg-[#319D35]"
-              }`}
+              className="flex flex-col p-1 lg:p-2 rounded-lg cursor-pointer transition-all bg-[#0978df]"
               style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
               onClick={handleRegisterClick}
               disabled={loading}
@@ -118,8 +116,12 @@ export default function Register({ formId }) {
         </p>
       </div>
 
-      <div className="hidden lg:block">
-        <Image src={banner} alt="banner" className="relative w-full" />
+      <div className="hidden lg:block ml-16">
+        <Image
+          src={illustration}
+          alt="illustration"
+          className="relative w-full"
+        />
       </div>
     </div>
   );
