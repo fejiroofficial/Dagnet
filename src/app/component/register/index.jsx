@@ -30,7 +30,10 @@ export default function Register({ formId }) {
     try {
       const response = await createSubscriber(formData);
       if (response?.ok) {
-        const formResponse = await addSubscriberToForm(formId, formData.email_address);
+        const formResponse = await addSubscriberToForm(
+          formId,
+          formData.email_address
+        );
         if (formResponse.ok) {
           setIsSuccess(true);
           toast.success("Registration successful! Check your email.");
@@ -51,13 +54,11 @@ export default function Register({ formId }) {
       <ToastContainer position="top-right" autoClose={3000} />
       <div className="flex flex-col gap-4 pb-3">
         <h1 className="text-[#BCBCBC] text-[16px] font-medium text-center lg:text-start max-w-[493px] pb-6 lg:pb-0">
-          Join our step-by-step email course and learn how to create a
-          high-converting SaaS landing page—delivered straight to your inbox
+          Download our 10 proven meeting agenda templates to run productive
+          30-minute meetings—delivered straight to your inbox
         </h1>
         {isSuccess ? (
-          <div
-            className="flex flex-col items-center justify-center w-full h-[90px] rounded-lg bg-[#D3FBEB] text-[#0D905C]"
-          >
+          <div className="flex flex-col items-center justify-center w-full h-[90px] rounded-lg bg-[#D3FBEB] text-[#0D905C]">
             <p className="text-[16px] lg:text-[22px] text-center max-w-[420px]">
               Success! Now check your email to confirm you gave us the right
               one.
@@ -91,20 +92,18 @@ export default function Register({ formId }) {
               onClick={handleRegisterClick}
               disabled={loading}
             >
-              <div
-                className="flex flex-col items-center justify-center w-full h-[90px] text-white"
-              >
+              <div className="flex flex-col items-center justify-center w-full h-[90px] text-white">
                 <div className="flex flex-col items-center">
                   {loading ? (
                     <p className="text-[16px] lg:text-[22px] font-bold">
-                      Registering...
+                      Downloading...
                     </p>
                   ) : (
                     <>
                       <p className="text-[16px] lg:text-[22px] font-bold">
                         {loading
-                          ? "Registering..."
-                          : "YES! I’M IN, REGISTER ME FOR COURSE NOW"}
+                          ? "Downloading..."
+                          : "DOWNLOAD AGENDA TEMPLATES NOW"}
                       </p>
                     </>
                   )}

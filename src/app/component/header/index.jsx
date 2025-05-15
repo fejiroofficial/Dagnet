@@ -30,10 +30,10 @@ export default function Header({ rating = 5 }) {
 
       <div className="flex flex-col items-center relative z-10 text-center">
         <h1 className="text-[32px] lg:text-[48px] lg:font-bold max-w-[1011px]">
-          How To Transform Your Landing Page into a Customer Acquisition Engine in 5 Days
+          How To Run Laser-Focused 30-Minute Meetings That Actually Get Things Done
         </h1>
         <h2 className="text-[18px] lg:text-[22px] font-medium lg:mb-3 w-[329px] md:w-full">
-          Without having to pay anyone a <span className="font-semibold lg:font-[900]">DIME</span> out of your $0 marketing budget
+        Without Wasting Time, Losing Focus, or <span className="font-semibold lg:font-[900]">Chasing People</span> for Follow-Ups
         </h2>
       </div>
     </div>
